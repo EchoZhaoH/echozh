@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "preserve",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "jsxFactory": "React.createElement",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@style/*": [
+        "src/style/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./node-modules"
+  ]
+}
