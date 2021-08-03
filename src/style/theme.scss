@@ -3,3 +3,7 @@
 @import "mixin";
 
 @include reset();
+
+.profile-app {
+  height: 100%;
+}
