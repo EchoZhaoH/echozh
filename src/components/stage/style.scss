@@ -9,5 +9,65 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    &:hover {
+      .stage-top,
+      .stage-bottom {
+        transform: translateY(0);
+      }
+    }
+    .stage-top,
+    .stage-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50%;
+      transition: all .3s;
+      button {
+        padding: 5px 10px;
+        border: none;
+        background: inherit;
+      }
+    }
+    .stage-top {
+      background-color: rgba($color: $base-color, $alpha: 0.7);
+      transform: translateY(-100%);
+      button {
+        background-color: none;
+      }
+    }
+    .stage-bottom {
+      background-color: rgba($color: $base-color1, $alpha: 0.7);
+      transform: translateY(100%);
+      button {
+        animation: 3s linear 1s infinite alternate inset-world;
+      }
+    }
+  }
+}
+
+@keyframes inset-world {
+  0% {
+    opacity: 1;
+    color: $font-color;
+  }
+  20% {
+    opacity: 0.8;
+    color: $base-color;
+  }
+  40% {
+    opacity: 0.6;
+    color: $base-color1;
+  }
+  60% {
+    opacity: 0.5;
+    color: $base-color2;
+  }
+  80% {
+    opacity: 0.75;
+    color: $base-color3;
+  }
+  100% {
+    opacity: 1;
+    color: $font-color;
   }
 }

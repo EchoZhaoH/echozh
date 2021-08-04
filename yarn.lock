@@ -10366,6 +10366,11 @@ text-table@0.2.0, text-table@^0.2.0:
   resolved "https://registry.nlark.com/text-table/download/text-table-0.2.0.tgz?cache=0&sync_timestamp=1618847142316&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftext-table%2Fdownload%2Ftext-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
+three@^0.131.2:
+  version "0.131.2"
+  resolved "https://registry.nlark.com/three/download/three-0.131.2.tgz#95c1c805594bf5bf4d5027b25b2bc07ae20baa81"
+  integrity sha1-lcHIBVlL9b9NUCeyWyvAeuILqoE=
+
 throat@^5.0.0:
   version "5.0.0"
   resolved "https://registry.nlark.com/throat/download/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"
