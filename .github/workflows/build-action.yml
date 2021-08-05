@@ -18,3 +18,8 @@ jobs:
         run: yarn install
       - name: build process
         run: yarn build
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: main
+          folder: docs
