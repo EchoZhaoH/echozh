@@ -1,8 +1,0 @@
-@import url("../assets/font/inter.css");
-
-html {
-  font-family: 'Inter', sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
