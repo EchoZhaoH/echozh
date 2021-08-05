@@ -1,11 +1,8 @@
 name: build-action
 on:
   push:
-    branches:
-      - main
     tags:
-      - v1.*
-      - v2.*
+      - v*
 jobs:
   build:
     name: website build
