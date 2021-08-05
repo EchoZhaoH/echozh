@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+    tags:
+      - v1.*
+      - v2.*
 jobs:
   build:
     name: website build
