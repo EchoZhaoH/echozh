@@ -12,6 +12,8 @@ jobs:
         shell: bash
         working-directory: ./
     steps:
+      - name: checkout main branch
+        uses: actions/checkout@main
       - name: install process
         run: yarn install
       - name: build process
