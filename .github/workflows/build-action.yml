@@ -13,11 +13,14 @@ jobs:
         working-directory: ./
     steps:
       - name: checkout pages
-        uses: actions/checkout@pages
+        uses: actions/checkout@v2.3.1
+
       - name: install process
         run: yarn install
+
       - name: build process
         run: yarn build
+
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
