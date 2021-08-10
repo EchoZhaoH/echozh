@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 interface StageItemProps {
   bg: string;
   topBgColor?: string;
@@ -13,7 +14,9 @@ export function StageItem(props: StageItemProps) {
         <button>{props.topText || '看看'}</button>
       </div>
       <div className="stage-bottom" style={{ backgroundColor: props.bottomBgColor }}>
-        <button>{props.bottomText || '进入里世界'}</button>
+        <button>
+          <Link to="/v-world" >{props.bottomText || '进入里世界'}</Link>
+        </button>
       </div>
     </div>
   )

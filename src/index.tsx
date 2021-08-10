@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { RoutesMap } from './route';
 
 import "@style/theme.scss"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RoutesMap />
   </React.StrictMode>,
   document.getElementById('root')
 );
