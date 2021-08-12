@@ -12,6 +12,9 @@
       "@/*": [
         "src/*"
       ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
       "@style/*": [
         "src/style/*"
       ],

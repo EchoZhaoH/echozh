@@ -1,11 +1,11 @@
 import React from 'react';
-import { Stage } from '@components/stage';
+import { Entry } from '@components/entry';
+import { useDark } from './hooks/useDark';
 
 function App() {
+  useDark()
   return (
-    <div className="profile-app">
-      <Stage />
-    </div>
+    <Entry />
   );
 }
 

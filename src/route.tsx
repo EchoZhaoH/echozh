@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 
 import App from './App'
-import { VWorld } from './components/v-world'
+import VWorld from './components/v-world'
 
 export function RoutesMap() {
   return (

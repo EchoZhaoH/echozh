@@ -1,39 +1,39 @@
-import { useEffect, useRef } from 'react'
-import * as THREE from 'three'
+import { useEffect, useRef } from 'react';
+import * as THREE from 'three';
 
-import bgImg from '@assets/images/stage-1.jpeg'
+import bgImg from '@assets/images/stage-1.jpeg';
 
-export function VWorld() {
-  const ref = useRef<HTMLDivElement>(null)
-  
+export default function VWorld() {
+  const ref = useRef<HTMLDivElement>(null);
+
   // 创建场景
   useEffect(() => {
-    const el = ref.current
+    const el = ref.current;
     if (!el) {
-      return
+      return;
     }
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  
+
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     el.appendChild(renderer.domElement);
 
     const geometry = new THREE.SphereGeometry();
     const material = new THREE.MeshBasicMaterial({
-      map: new THREE.TextureLoader().load(bgImg)
+      map: new THREE.TextureLoader().load(bgImg),
     });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
-    const bgTexture = new THREE.TextureLoader().load(bgImg)
-    bgTexture.mapping = THREE.CubeRefractionMapping
-    bgTexture.wrapS = THREE.RepeatWrapping
-    bgTexture.wrapT = THREE.RepeatWrapping
-    bgTexture.repeat.set(1, 1)
-    scene.background = bgTexture
+    const bgTexture = new THREE.TextureLoader().load(bgImg);
+    bgTexture.mapping = THREE.CubeRefractionMapping;
+    bgTexture.wrapS = THREE.RepeatWrapping;
+    bgTexture.wrapT = THREE.RepeatWrapping;
+    bgTexture.repeat.set(1, 1);
+    scene.background = bgTexture;
 
     camera.position.z = 5;
-    let timer: number | null = null
+    let timer: number | null = null;
     const animate = function () {
       timer = requestAnimationFrame(animate);
 
@@ -42,15 +42,12 @@ export function VWorld() {
 
       renderer.render(scene, camera);
     };
-    animate()
+    animate();
     return () => {
-      if (timer === null) {
-        return
-      }
-      cancelAnimationFrame(timer)
-    }
-  }, [])
+      cancelAnimationFrame(timer);
+    };
+  }, []);
   return (
-    <div ref={ref}></div>
-  )
+    <div ref={ref} />
+  );
 }
