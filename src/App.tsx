@@ -1,6 +1,6 @@
 import React from 'react';
 import { Entry } from '@components/entry';
-import { useDark } from './hooks/useDark';
+import { useDark } from './hooks';
 
 function App() {
   useDark()
