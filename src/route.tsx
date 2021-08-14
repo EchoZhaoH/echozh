@@ -9,7 +9,7 @@ import VWorld from './components/v-world'
 
 export function RoutesMap() {
   return (
-    <Router>
+    <Router basename="echozh">
       <Switch>
         <Route exact path="/v-world" component={VWorld} />
         <Route path="/" component={App} />
