@@ -1,10 +1,9 @@
 import { useHref } from '@/hooks/useHref';
 import { AnchorButton, Navbar } from '@blueprintjs/core'
-import { generatePath, RouterProps } from 'react-router-dom';
 
-export function Entry(props: RouterProps) {
-  const { history } = props
+export function Entry() {
   const rootHref = useHref('/')
+  const vWorldHref = useHref('/v-world')
   return (
     <Navbar>
       <Navbar.Group>
@@ -24,9 +23,7 @@ export function Entry(props: RouterProps) {
           text="瞎搞"
           outlined={false}
           minimal
-          href={history.createHref({
-            pathname: generatePath('/v-world')
-          })}
+          href={vWorldHref}
         />
       </Navbar.Group>
     </Navbar>
