@@ -1,11 +1,10 @@
+import { useHref } from '@/hooks/useHref';
 import { AnchorButton, Navbar } from '@blueprintjs/core'
 import { generatePath, RouterProps } from 'react-router-dom';
 
 export function Entry(props: RouterProps) {
   const { history } = props
-  const rootHref = history.createHref({
-    pathname: generatePath('/')
-  })
+  const rootHref = useHref('/')
   return (
     <Navbar>
       <Navbar.Group>
