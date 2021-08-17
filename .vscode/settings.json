@@ -7,5 +7,13 @@
     "typescriptreact"
   ],
   "eslint.format.enable": true,
-  "eslint.workingDirectories": ["./src"]
+  "eslint.workingDirectories": ["./src"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  }
 }
