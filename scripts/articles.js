@@ -5,8 +5,8 @@ const through2 = require('through2')
 const PluginError = require('plugin-error')
 
 const articleDir = path.resolve(__dirname, '../articles')
-const buildDir = process.env.NODE_ENV === 'production' ? 'doc' : 'public'
-const saveArticleDir = path.resolve(__dirname, `../${buildDir}/articles`)
+const buildDir = process.env.NODE_ENV === 'production' ? 'docs' : 'public'
+const saveArticleDir = `${buildDir}/articles/*`
 const mdIT = new MarkdownIt()
 
 function translateMD(filename, data) {
@@ -40,4 +40,6 @@ gulp.src(path.join(articleDir, '*.md')).pipe(function (opt) {
     this.push(file)
     cb()
   })
-}()).pipe(gulp.dest(saveArticleDir))
+}()).pipe(gulp.dest(saveArticleDir, {
+  cwd: path.resolve(__dirname, '../')
+}))
