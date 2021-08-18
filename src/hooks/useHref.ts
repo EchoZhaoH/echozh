@@ -12,5 +12,5 @@ export function useHref(path: string, params?: ExtractRouteParams<string>) {
   useEffect(() => {
     setHref(generatePath(path, params))
   }, [path, params])
-  return `/echozh/${link}`
+  return link
 }

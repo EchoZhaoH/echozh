@@ -6,7 +6,7 @@ export function Entry() {
   const rootHref = useHref('/')
   const vWorldHref = useHref('/v-world')
   return (
-    <>
+    <div className="container-bg">
       <Navbar>
         <Navbar.Group>
           <Navbar.Heading>
@@ -30,6 +30,6 @@ export function Entry() {
         </Navbar.Group>
       </Navbar>
       <Article />
-    </>
+    </div>
   );
 }

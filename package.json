@@ -2,7 +2,6 @@
   "name": "profile",
   "version": "0.1.0",
   "private": true,
-  "homepage": "echozh",
   "devDependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
@@ -86,7 +85,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "scripts": {
-    "start": "node scripts/start.js && yarn run article",
+    "start": "yarn run article && node scripts/start.js",
     "build": "node scripts/build.js && yarn run article",
     "test": "node scripts/test.js",
     "article": "node scripts/articles.js"

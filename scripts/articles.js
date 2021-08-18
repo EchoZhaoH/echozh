@@ -1,14 +1,11 @@
 const gulp = require('gulp')
 const path = require('path')
-const fs = require('fs')
 const MarkdownIt = require('markdown-it')
-const chalk = require('chalk')
-const sha256 = require('sha256')
 const through2 = require('through2')
 const PluginError = require('plugin-error')
 
 const articleDir = path.resolve(__dirname, '../articles')
-const saveArticleDir = path.resolve(__dirname, '../docs/articles/assets')
+const saveArticleDir = path.resolve(__dirname, '../public/articles/assets')
 const mdIT = new MarkdownIt()
 
 function translateMD(filename, data) {
