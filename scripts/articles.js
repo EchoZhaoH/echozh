@@ -5,7 +5,8 @@ const through2 = require('through2')
 const PluginError = require('plugin-error')
 
 const articleDir = path.resolve(__dirname, '../articles')
-const saveArticleDir = path.resolve(__dirname, '../public/articles/assets')
+const buildDir = process.env.NODE_ENV === 'production' ? 'doc' : 'public'
+const saveArticleDir = path.resolve(__dirname, `../${buildDir}/articles`)
 const mdIT = new MarkdownIt()
 
 function translateMD(filename, data) {
