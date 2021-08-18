@@ -5,7 +5,7 @@ const through2 = require('through2')
 const PluginError = require('plugin-error')
 console.log('node mode: ', process.env.NODE_ENV)
 const articleDir = path.resolve(__dirname, '../articles')
-const buildDir = process.env.NODE_ENV === 'production' ? 'docs' : 'public'
+const buildDir = 'docs'
 const saveArticleDir = `${buildDir}/articles/*`
 const mdIT = new MarkdownIt()
 
