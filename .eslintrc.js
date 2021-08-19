@@ -14,7 +14,8 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
-    'jsx-quotes': ["error", "prefer-double"]
+    'jsx-quotes': ["error", "prefer-double"],
+    'react/prop-types': 0
   },
   env: {
     browser: true,

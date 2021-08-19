@@ -7,3 +7,10 @@
 .bp3-dark .container-bg {
   background-color: $dark-gray4;
 }
+
+html,
+body,
+#root,
+.container-bg {
+  height: 100%;
+}

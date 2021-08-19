@@ -30,6 +30,7 @@
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "chalk": "^4.1.2",
     "css-loader": "4.3.0",
+    "dateformat": "^4.5.1",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^7.11.0",

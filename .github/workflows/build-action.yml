@@ -20,6 +20,8 @@ jobs:
 
       - name: build process
         run: yarn build
+        env:
+          NODE_ENV: production
 
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
