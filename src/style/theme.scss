@@ -2,15 +2,28 @@
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
-@import "~@blueprintjs/core/lib/scss/variables";
+@import "variable";
 
-.bp3-dark .container-bg {
-  background-color: $dark-gray4;
+body {
+  background-color: #f1f0ef;
+  background-image: radial-gradient(ellipse farthest-corner at 50% 0, #a39990 0%, #786f69 100%);
 }
 
 html,
 body,
-#root,
-.container-bg {
+#root {
   height: 100%;
+}
+
+.page-back {
+  background-color: $color3;
+}
+
+.content {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+}
+.text-center {
+  text-align: center;
 }
