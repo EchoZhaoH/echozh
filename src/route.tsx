@@ -7,8 +7,10 @@ import {
 import App from './App'
 import { Article } from './components/article'
 import VWorld from './components/v-world'
+import { useDark } from './hooks'
 
 export function RoutesMap() {
+  useDark()
   return (
     <Router>
       <Switch>

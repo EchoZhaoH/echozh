@@ -4,26 +4,18 @@
 
 @import "variable";
 
-body {
-  background-color: #f1f0ef;
-  background-image: radial-gradient(ellipse farthest-corner at 50% 0, #a39990 0%, #786f69 100%);
-}
-
 html,
 body,
 #root {
   height: 100%;
 }
 
-.page-back {
-  background-color: $color3;
+body.bp3-dark {
+  background-color: #30404d;
 }
 
-.content {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1000px;
-}
-.text-center {
-  text-align: center;
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

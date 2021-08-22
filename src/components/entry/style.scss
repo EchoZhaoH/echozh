@@ -1,0 +1,30 @@
+.content {
+  margin: 0 auto;
+  width: 50%;
+  max-width: 600px;
+
+  .bp3-card {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  p {
+    text-indent: 28px;
+  }
+
+  .github-log {
+    width: 14px;
+    vertical-align: bottom;
+    margin: 0 5px;
+  }
+
+  ul {
+    li {
+      list-style: none;
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
