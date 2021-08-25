@@ -70,3 +70,18 @@ declare module '*.module.sass' {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
+
+declare module '*.glsl' {
+  const classes: string;
+  export default classes;
+}
+
+declare module '*.vert' {
+  const classes: string;
+  export default classes;
+}
+
+declare module '*.frag' {
+  const classes: string;
+  export default classes;
+}

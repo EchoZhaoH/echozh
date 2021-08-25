@@ -2757,6 +2757,11 @@ async-settle@^1.0.0:
   dependencies:
     async-done "^1.2.2"
 
+async@^1.4.2:
+  version "1.5.2"
+  resolved "https://registry.nlark.com/async/download/async-1.5.2.tgz?cache=0&sync_timestamp=1628206303171&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fasync%2Fdownload%2Fasync-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
+  integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
+
 async@^2.6.2:
   version "2.6.3"
   resolved "https://registry.nlark.com/async/download/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
@@ -4130,6 +4135,13 @@ css@^3.0.0:
     inherits "^2.0.4"
     source-map "^0.6.1"
     source-map-resolve "^0.6.0"
+
+cssauron@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/cssauron/download/cssauron-1.4.0.tgz#a6602dff7e04a8306dc0db9a551e92e8b5662ad8"
+  integrity sha1-pmAt/34EqDBtwNuaVR6S6LVmKtg=
+  dependencies:
+    through X.X.X
 
 cssdb@^4.4.0:
   version "4.4.0"
@@ -5860,6 +5872,22 @@ glogg@^1.0.0:
   integrity sha1-LX3XAr7aIus7/634gGltpthGMT8=
   dependencies:
     sparkles "^1.0.0"
+
+glsl-man@^1.1.14:
+  version "1.1.14"
+  resolved "https://registry.nlark.com/glsl-man/download/glsl-man-1.1.14.tgz#14acf7969d3cd9113cbff291ea1991a469022630"
+  integrity sha1-FKz3lp082RE8v/KR6hmRpGkCJjA=
+  dependencies:
+    cssauron "^1.4.0"
+    tree-traversal "^1.1.1"
+
+glsl-shader-loader@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.nlark.com/glsl-shader-loader/download/glsl-shader-loader-0.1.6.tgz#82240cddfc0c09b71019bc813d8b14929823a8e8"
+  integrity sha1-giQM3fwMCbcQGbyBPYsUkpgjqOg=
+  dependencies:
+    glsl-man "^1.1.14"
+    loader-utils "^1.1.0"
 
 graceful-fs@^4.0.0:
   version "4.2.8"
@@ -11495,6 +11523,11 @@ through2@^4.0.2:
   dependencies:
     readable-stream "3"
 
+through@X.X.X:
+  version "2.3.8"
+  resolved "https://registry.nlark.com/through/download/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
+
 thunky@^1.0.2:
   version "1.1.0"
   resolved "https://registry.nlark.com/thunky/download/thunky-1.1.0.tgz#5abaf714a9405db0504732bbccd2cedd9ef9537d"
@@ -11609,6 +11642,13 @@ tr46@^2.1.0:
   integrity sha1-+oeqgcpdWUHajL8fm3SdyWmk4kA=
   dependencies:
     punycode "^2.1.1"
+
+tree-traversal@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.nlark.com/tree-traversal/download/tree-traversal-1.1.2.tgz#b8f3b9b40736956ab973e7eea3a47fc7d119302b"
+  integrity sha1-uPO5tAc2lWq5c+fuo6R/x9EZMCs=
+  dependencies:
+    async "^1.4.2"
 
 tryer@^1.0.1:
   version "1.0.1"
