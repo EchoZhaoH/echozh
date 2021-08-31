@@ -4,6 +4,7 @@ import { useWebGL } from "@/hooks/useWebGL";
 import { useEffect, useRef } from "react"
 import vertex from './shader.vert'
 import frag from './shader.frag'
+import { BackEntry } from "@/components/back-entry";
 
 export function Sierpinski() {
   const ref = useRef<HTMLCanvasElement>(null)
@@ -52,7 +53,12 @@ export function Sierpinski() {
       )
       gl.useProgram(program)
       const vPosition = gl.getAttribLocation(program, 'vPosition')
-      gl.vertexAttribPointer(vPosition, 2, gl.FLOAT, false, 0, 0)
+      const size = 2 // 定点属性组成数量，必须是 1，2，3 或者 4
+      const type = gl.FLOAT // 数组中每个元素的数据类型
+      const normalized = false // 归一化处理
+      const stride = 0
+      const offset = 0
+      gl.vertexAttribPointer(vPosition, size, type, normalized, stride, offset)
       gl.enableVertexAttribArray(vPosition)
     }
     init()
@@ -60,8 +66,11 @@ export function Sierpinski() {
     render()
   }, [gl])
   return (
-    <div>
-      <canvas width="500px" height="500px" ref={ref} style={{backgroundColor: '#fff'}}></canvas>
-    </div>
+    <>
+      <BackEntry />
+      <div>
+        <canvas width="500px" height="500px" ref={ref} style={{ backgroundColor: '#fff' }}></canvas>
+      </div>
+    </>
   )
 }

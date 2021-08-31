@@ -29,7 +29,18 @@ export function Entry() {
           <li>
             <Card interactive>
               <H5>交互式计算机图形学</H5>
-              <p>基于 WebGL 的自顶向下方法（第七版）<br />这有我的第一个 <Link to="/v-world">demo</Link> </p>
+              <p>基于 WebGL 的自顶向下方法（第七版）<br />这有我跟着练习的 demo</p>
+              <ul>
+                <li>
+                  <Link to="/v-world">demo</Link>
+                </li>
+                <li>
+                  <Link to="/webgl/class1/demo1">demo1</Link>
+                </li>
+                <li>
+                  <Link to="/webgl/class1/demo2">demo2</Link>
+                </li>
+              </ul>
             </Card>
           </li>
         </ul>
