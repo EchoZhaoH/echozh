@@ -1,4 +1,4 @@
-import { flatten, mix, vec2 } from "@/common/mv";
+import { flatten, mix, vec3 } from "@/common/mv";
 import { createProgram, createShader } from "@/common/shader";
 import { useWebGL } from "@/hooks/useWebGL";
 import { useEffect, useRef } from "react"
@@ -13,39 +13,20 @@ export function Sierpinski() {
     if (!gl) {
       return
     }
-    const numTimesDivide = 5
-    const pointsCount = Math.pow(3, numTimesDivide + 1);
+    const pointsCount = 5000;
     function init() {
       const vertices = [
-        vec2(-1.0, -1.0),
-        vec2(0.0, 1.0),
-        vec2(1.0, -1.0)
+        vec3(-0.5, -0.5, -0.5),
+        vec3(0.5, -0.5, -0.5),
+        vec3(0.0, 0.5, 0.0),
+        vec3(0.0, -0.5, 0.5)
       ]
-      const points: number[][] = []
-
-      function triangle(a: number[], b: number[], c: number[]) {
-        points.push(a);
-        points.push(b)
-        points.push(c)
+      const points = [vec3(0.0, 0.0, 0.0)]
+      for (let i = 0; points.length < pointsCount; i++) {
+        const j = Math.floor(Math.random() * 4)
+        points.push(mix(points[i], vertices[j], 0.5))
       }
 
-      function divideTriangle(a: number[], b: number[], c: number[], count: number) {
-        if (count === 0) {
-          triangle(a, b, c)
-        } else {
-          const ab = mix(a, b, 0.5)
-          const ac = mix(a, c, 0.5)
-          const bc = mix(b, c, 0.5)
-
-          count -= 1
-
-          divideTriangle(a, ab, ac, count)
-          divideTriangle(c, ac, bc, count)
-          divideTriangle(b, bc, ab, count)
-        }
-      }
-
-      divideTriangle(vertices[0], vertices[1], vertices[2], numTimesDivide)
       // 创建缓冲区
       const buffer = gl.createBuffer()
 
@@ -57,7 +38,7 @@ export function Sierpinski() {
     }
     function render() {
       gl.clear(gl.COLOR_BUFFER_BIT)
-      gl.drawArrays(gl.TRIANGLES, 0, pointsCount)
+      gl.drawArrays(gl.POINTS, 0, pointsCount)
     }
     function loaderProgram() {
       const program = createProgram(
@@ -69,7 +50,7 @@ export function Sierpinski() {
       )
       gl.useProgram(program)
       const vPosition = gl.getAttribLocation(program, 'vPosition')
-      const size = 2 // 定点属性组成数量，必须是 1，2，3 或者 4
+      const size = 3 // 定点属性组成数量，必须是 1，2，3 或者 4
       const type = gl.FLOAT // 数组中每个元素的数据类型
       const normalized = false // 归一化处理
       const stride = 0

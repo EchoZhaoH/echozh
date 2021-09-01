@@ -40,6 +40,12 @@ export function Entry() {
                 <li>
                   <Link to="/webgl/class1/demo2">demo2</Link>
                 </li>
+                <li>
+                  <Link to="/webgl/class1/demo3">demo3</Link>
+                </li>
+                <li>
+                  <Link to="/webgl/class1/demo3">demo4</Link>
+                </li>
               </ul>
             </Card>
           </li>
