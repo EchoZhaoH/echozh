@@ -19,3 +19,14 @@ body.bp3-dark {
   align-items: center;
   justify-content: center;
 }
+
+@each $dir, $dirV in $direction {
+  @each $size, $sizeV in $sizeMap {
+    .mg#{$dir}-#{$size} {
+      margin-#{$dirV}: #{$sizeV}px;
+    }
+    .pd#{$dir}-#{$size} {
+      padding-#{$dirV}: #{$sizeV}px;
+    }
+  }
+}

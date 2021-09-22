@@ -43,6 +43,7 @@
     "eslint-plugin-testing-library": "^3.9.2",
     "eslint-webpack-plugin": "^2.5.2",
     "file-loader": "6.1.1",
+    "front-matter": "^4.0.2",
     "fs-extra": "^9.0.1",
     "glsl-shader-loader": "^0.1.6",
     "gulp": "^4.0.2",
@@ -164,7 +165,9 @@
   "dependencies": {
     "@blueprintjs/core": "^3.47.0",
     "@popperjs/core": "^2.9.2",
+    "classnames": "^2.3.1",
     "react-router-dom": "^5.2.0",
-    "three": "^0.131.2"
+    "three": "^0.131.2",
+    "typeit": "^8.0.3"
   }
 }

@@ -7,8 +7,7 @@ const PluginError = require('plugin-error')
 const sha256 = require('sha256')
 const chalk = require('chalk')
 const dateformat = require('dateformat')
-
-console.log('node mode: ', process.env.NODE_ENV)
+const frontMatter = require('front-matter')
 
 const articleDir = path.resolve(__dirname, '../articles')
 const buildDir = process.env.NODE_ENV === 'production' ? 'docs' : 'public'
@@ -17,19 +16,31 @@ const mdIT = new MarkdownIt()
 
 const articles = []
 
-function translateMD(stat, data) {
+function articleMatter(data) {
+  const { attributes, body } = frontMatter(data)
+  return {
+    title: attributes.title,
+    tag: attributes.tag,
+    date: dateformat(attributes.date, 'yyyy-mm-dd'),
+    body
+  }
+}
+
+function translateMD(data) {
   const id = sha256(data)
   const n = `${id}.json`
-  const titleIdx = String.prototype.indexOf.call(data, '\n')
-  const title = data.substr(0, titleIdx).replace(/[#\s]/g, '')
+  const matter = articleMatter(data)
   const item = {
-    title,
+    ...matter,
     id,
-    date: dateformat(stat.ctimeMs, 'yyyy-mm-dd')
+    body: matter.body.substr(0, 100).replace(/\s*/g, '')
   }
   articles.push(item)
   return {
-    content: JSON.stringify({ data: mdIT.render(data)}),
+    content: JSON.stringify({
+      ...matter,
+      body: mdIT.render(matter.body)
+    }),
     filename: n 
   }
 }
@@ -58,7 +69,7 @@ gulp.src(path.join(articleDir, '*.md')).pipe(function (opt) {
       filename: file.relative,
       content: file.contents.toString()
     })
-    const tx = translateMD(file.stat, fileOpts.content)
+    const tx = translateMD(fileOpts.content)
     file.contents = Buffer.from(tx.content)
     file.path = tx.filename
     this.push(file)

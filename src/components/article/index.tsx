@@ -1,23 +1,26 @@
-import { request } from "@/api"
-import { useEffect, useState } from "react"
 import { RouterProps } from "react-router-dom"
+import { ArticleOption } from "@/types/article"
+import { Classes, H1, Tag } from "@blueprintjs/core"
+import { useGet } from "@/hooks"
+import classNames from "classnames"
 
 interface ArticleProps extends RouterProps {
   id: string;
 }
 
 export function Article(props: ArticleProps) {
-  const [ data, setData ] = useState<string>('')
-  console.log(props)
-  useEffect(() => {
-    request(`/articles/${props.id}.json`).then(res => {
-      if (!res) {
-        return
-      }
-      setData((res as any).data)
-    })
-  }, [props.id])
+  const { fetching, data } = useGet<ArticleOption>(`/articles/${props.id}.json`)
+  const skeleton = classNames({ [Classes.SKELETON]: fetching })
   return (
-    <div dangerouslySetInnerHTML={{ __html: data }} className="container-bg"></div>
+    <div className="container-bg">
+      <H1 className={skeleton}>
+        {data.title}
+      </H1>
+      <div className={skeleton}>
+        {!!data.tag && <Tag className="mgr-s">{data.tag}</Tag>}
+        <span>{data.date}</span>
+      </div>
+      <article className={classNames(skeleton, 'mgt-l')} dangerouslySetInnerHTML={{ __html: data.body }}></article>
+    </div>
   )
 }
