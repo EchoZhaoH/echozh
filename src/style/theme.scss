@@ -3,6 +3,7 @@
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 @import "variable";
+@import "atom";
 
 html,
 body,
@@ -17,7 +18,7 @@ body.bp3-dark {
 #root {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 @each $dir, $dirV in $direction {

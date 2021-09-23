@@ -9,23 +9,10 @@
     }
   }
 
-  p {
-    text-indent: 28px;
-  }
-
   .github-log {
     width: 14px;
     vertical-align: bottom;
     margin: 0 5px;
-  }
-
-  ul {
-    li {
-      list-style: none;
-      &:not(:first-child) {
-        margin-top: 10px;
-      }
-    }
   }
 }
 

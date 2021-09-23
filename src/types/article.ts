@@ -3,4 +3,5 @@ export interface ArticleOption {
   tag?: string;
   date: string;
   body: string;
+  id: string;
 }

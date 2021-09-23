@@ -4,7 +4,6 @@ import { useWebGL } from "@/hooks/useWebGL";
 import { useEffect, useRef } from "react"
 import vertex from './shader.vert'
 import frag from './shader.frag'
-import { BackEntry } from "@/components/back-entry";
 
 export function Sierpinski() {
   const ref = useRef<HTMLCanvasElement>(null)
@@ -114,11 +113,9 @@ export function Sierpinski() {
     render()
   }, [gl])
   return (
-    <>
-      <BackEntry />
-      <div>
-        <canvas width="500px" height="500px" ref={ref} style={{ backgroundColor: '#fff' }}></canvas>
-      </div>
-    </>
+    <div>
+      <canvas width="500px" height="500px" ref={ref} style={{ backgroundColor: '#fff' }}></canvas>
+    </div>
+
   )
 }

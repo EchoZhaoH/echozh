@@ -9,7 +9,7 @@ interface ArticleProps extends RouterProps {
 }
 
 export function Article(props: ArticleProps) {
-  const { fetching, data } = useGet<ArticleOption>(`/articles/${props.id}.json`)
+  const { fetching, data } = useGet<ArticleOption>(`/articles/${props.id}.json`, {} as ArticleOption)
   const skeleton = classNames({ [Classes.SKELETON]: fetching })
   return (
     <div className="container-bg">

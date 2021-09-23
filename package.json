@@ -168,6 +168,7 @@
     "classnames": "^2.3.1",
     "react-router-dom": "^5.2.0",
     "three": "^0.131.2",
-    "typeit": "^8.0.3"
+    "typeit": "^8.0.3",
+    "typeit-react": "^2.0.3"
   }
 }
