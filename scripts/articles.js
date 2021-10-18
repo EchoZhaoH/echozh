@@ -8,11 +8,24 @@ const sha256 = require('sha256')
 const chalk = require('chalk')
 const dateformat = require('dateformat')
 const frontMatter = require('front-matter')
+const hljs = require('highlight.js')
 
 const articleDir = path.resolve(__dirname, '../articles')
 const buildDir = process.env.NODE_ENV === 'production' ? 'docs' : 'public'
 const saveArticleDir = `${buildDir}/articles/*`
-const mdIT = new MarkdownIt()
+const mdIT = new MarkdownIt({
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(str, { language: lang }).value;
+      } catch (err) {
+        console.log(err)
+      }
+    }
+
+    return ''; // use external default escaping
+  }
+})
 
 const articles = []
 

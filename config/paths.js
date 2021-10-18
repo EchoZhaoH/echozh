@@ -21,6 +21,8 @@ const publicUrlOrPath = getPublicUrlOrPath(
   process.env.PUBLIC_URL
 );
 
+const hljsCssPath = path.resolve(__dirname, '../node_modules/highlight.js/styles')
+
 const buildPath = process.env.BUILD_PATH || 'docs';
 
 const moduleFileExtensions = [
@@ -68,6 +70,7 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
+  hljsCssPath
 };
 
 
