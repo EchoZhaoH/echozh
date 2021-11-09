@@ -18,7 +18,6 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
@@ -26,6 +25,8 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const WindiCssWebpackPlugin = require('windicss-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -40,6 +41,11 @@ const webpackDevClientEntry = require.resolve(
 const reactRefreshOverlayEntry = require.resolve(
   'react-dev-utils/refreshOverlayInterop'
 );
+const windiVirtualCssEntry = [
+  path.join(__dirname, '../virtual:windi-base.css'),
+  path.join(__dirname, '../virtual:windi-components.css'),
+  path.join(__dirname, '../virtual:windi-utilities.css')
+]
 
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
@@ -347,6 +353,7 @@ module.exports = function (webpackEnv) {
         new ModuleScopePlugin(paths.appSrc, [
           paths.appPackageJson,
           reactRefreshOverlayEntry,
+          ...windiVirtualCssEntry
         ]),
       ],
     },
@@ -721,6 +728,14 @@ module.exports = function (webpackEnv) {
           // The formatter is invoked directly in WebpackDevServerUtils during development
           formatter: isEnvProduction ? typescriptFormatter : undefined,
         }),
+      // windicss plugin
+      new WindiCssWebpackPlugin(),
+      // copy plugin
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, '../model'), to: path.join(paths.appBuild, 'static/model') }
+        ]
+      })
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
     // Tell webpack to provide empty mocks for them so importing them works.

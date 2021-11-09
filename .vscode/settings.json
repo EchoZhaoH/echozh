@@ -7,7 +7,6 @@
     "typescriptreact"
   ],
   "eslint.format.enable": true,
-  "eslint.workingDirectories": ["./src"],
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,

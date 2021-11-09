@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { BackEntry } from '@components/back-entry'
 
 import bgImg from '@assets/images/stage-1.jpeg';
 
@@ -49,9 +48,6 @@ export default function VWorld() {
     };
   }, []);
   return (
-    <>
-      <div ref={ref} />
-      <BackEntry />
-    </>
+    <div ref={ref} />
   );
 }

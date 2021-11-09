@@ -1,25 +1,29 @@
 import { Link } from 'react-router-dom';
-import githubLog from '@assets/images/github-log.png';
 
 import './style.scss'
-import { H4 } from '@blueprintjs/core';
 import TypeIt from 'typeit-react';
+import { Header } from '@components/header';
+import { Avatar } from '@components/avatar';
 
 export function Entry() {
   return (
-    <div className="content flex-center-column fill-height">
-      <TypeIt
-        as="div"
-        options={{
-          cursor: false
-        } as any}
-      >
-        <div className="flex-center-column fill-height">
-          <H4>Hi 我是 Echo</H4>
-          <p className="mgt-l mgl-l mgr-l">一名前端但是不擅长前端的前端工程师，目前就职于 ZOOM。这是我的<Link to="https://github.com/EchoZhaoH"><img src={githubLog} className="github-log" />github</Link>，欢迎关注我。<br />
-          </p>
-        </div>
-      </TypeIt>
-    </div>
+    <>
+      <Header />
+      <div className="content mt-48">
+        <Avatar />
+        <TypeIt
+          as="div"
+          options={{
+            cursor: false
+          } as any}
+        >
+          <div>
+            <h4 className="text-center">Hi 我是 Echo</h4>
+            <p className="mgt-l mgl-l mgr-l"><span>一名前端但是不擅长前端的前端工程师，目前就职于 ZOOM。这是我的</span><Link className="inline-block" to="https://github.com/EchoZhaoH">github</Link><span>，欢迎关注我。</span>
+            </p>
+          </div>
+        </TypeIt>
+      </div>
+    </>
   );
 }

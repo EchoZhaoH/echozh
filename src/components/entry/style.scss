@@ -1,13 +1,8 @@
 .content {
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   width: 50%;
   max-width: 600px;
-
-  .bp3-card {
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
 
   .github-log {
     width: 14px;

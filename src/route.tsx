@@ -7,20 +7,16 @@ import {
 import App from './App'
 import { Archive } from './components/archive'
 import { Article } from './components/article'
-import { Header } from './components/header'
 import VWorld from './components/v-world'
 import { Sierpinski as Class1Demo1 } from './components/webgl/class1/demo1'
 import { Sierpinski as Class1Demo2 } from './components/webgl/class1/demo2'
 import { Sierpinski as Class1Demo3 } from './components/webgl/class1/demo3'
 import { Sierpinski as Class1Demo4 } from './components/webgl/class1/demo4'
 import { WEBGLClassesPage } from './components/webgl/classes'
-import { useDark } from './hooks'
 
 export function RoutesMap() {
-  useDark()
   return (
     <Router>
-      <Header />
       <Switch>
         <Route exact path="/v-world" component={VWorld} />
         <Route exact path="/webgl/class1/demo4" component={Class1Demo4} />

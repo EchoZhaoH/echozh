@@ -1,24 +1,18 @@
 import { Link } from 'react-router-dom'
-import { Alignment, Button, Navbar } from "@blueprintjs/core";
 
 export function Header() {
   return (
-    <Navbar>
-      <Navbar.Group align={Alignment.LEFT}>
-        <Navbar.Heading>
-          <Link to="/">Echo</Link>
-        </Navbar.Heading>
-      </Navbar.Group>
-      <Navbar.Group align={Alignment.RIGHT}>
-        <Button className="mgr-l" minimal icon="archive">
-          <Link to="/articles">Archive</Link>
-        </Button>
-        <Button minimal icon="lab-test">
-          <Link to="/webgl">
-            WEBGL
-          </Link>
-        </Button>
-      </Navbar.Group>
-    </Navbar>
+    <div className="flex flex-row px-10 mt-10">
+      <Link to="/">
+        Echo
+      </Link>
+      <span className="flex-1"></span>
+      <Link to="/articles">
+        随想
+      </Link>
+      <Link to="/webgl" className="ml-4">
+         WebGl
+      </Link>
+    </div>
   )
 }
