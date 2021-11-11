@@ -85,3 +85,10 @@ declare module '*.frag' {
   const classes: string;
   export default classes;
 }
+
+declare module 'live2d-widget/src' {
+  const L2Dwidget: any;
+  export {
+    L2Dwidget
+  };
+}

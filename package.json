@@ -168,6 +168,8 @@
     "@popperjs/core": "^2.9.2",
     "classnames": "^2.3.1",
     "highlight.js": "^11.2.0",
+    "pixi-live2d-display": "^0.3.1",
+    "pixi.js": "^6.2.0",
     "react-router-dom": "^5.2.0",
     "three": "^0.131.2",
     "typeit": "^8.0.3",

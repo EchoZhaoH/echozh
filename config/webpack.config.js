@@ -565,7 +565,7 @@ module.exports = function (webpackEnv) {
               options: {
                 name: 'static/media/[name].[hash:8].[ext]',
               },
-            },
+            }
             // ** STOP ** Are you adding a new loader?
             // Make sure to add the new loader(s) before the "file" loader.
           ],
@@ -733,7 +733,8 @@ module.exports = function (webpackEnv) {
       // copy plugin
       new CopyWebpackPlugin({
         patterns: [
-          { from: path.resolve(__dirname, '../model'), to: path.join(paths.appBuild, 'static/model') }
+          { from: path.resolve(__dirname, '../public/model'), to: path.join(isEnvDevelopment ? paths.appPublic : paths.appBuild, 'model') },
+          { from: path.resolve(__dirname, '../public/static'), to: path.join(isEnvDevelopment ? paths.appPublic : paths.appBuild, 'static') }
         ]
       })
     ].filter(Boolean),
