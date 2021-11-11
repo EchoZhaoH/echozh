@@ -11,7 +11,7 @@ interface ArticleProps extends RouterProps {
 export function Article(props: ArticleProps) {
   const { data } = useGet<ArticleOption>(`/articles/${props.id}.json`, {} as ArticleOption)
   return (
-    <div className="py-4 mx-auto sm:w-screen-sm">
+    <div className="py-4 mx-auto sm:w-screen-sm <sm:px-4">
       <h4 className="text-lg">
         {data.title}
       </h4>
