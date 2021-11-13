@@ -2497,6 +2497,11 @@
     jiti "^1.12.9"
     windicss "^3.2.1"
 
+"@windicss/plugin-icons@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/@windicss/plugin-icons/download/@windicss/plugin-icons-1.0.2.tgz#8bc4024ebeb516a9d68b013d8a16db4509f4184f"
+  integrity sha1-i8QCTr61FqnWiwE9ihbbRQn0GE8=
+
 "@windicss/plugin-utils@^1.5.1":
   version "1.5.1"
   resolved "https://registry.npmmirror.com/@windicss/plugin-utils/download/@windicss/plugin-utils-1.5.1.tgz?cache=0&sync_timestamp=1636066902348&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40windicss%2Fplugin-utils%2Fdownload%2F%40windicss%2Fplugin-utils-1.5.1.tgz#9750bb72e8c14585e011d46a33351d47d8519e31"
@@ -7953,12 +7958,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.nlark.com/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0:
-  version "4.17.21"
-  resolved "https://registry.nlark.com/lodash/download/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
-
-lodash@latest:
+"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0, lodash@latest:
   version "4.17.21"
   resolved "https://registry.nlark.com/lodash/download/lodash-4.17.21.tgz?cache=0&sync_timestamp=1618847150612&other_urls=https%3A%2F%2Fregistry.nlark.com%2Flodash%2Fdownload%2Flodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=

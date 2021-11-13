@@ -19,7 +19,7 @@ export function Entry() {
         >
           <div>
             <h4 className="text-center">Hi 我是 Echo</h4>
-            <p className="mgt-l mgl-l mgr-l text-center"><span>幻想工程师，喜欢拍照。这是我的</span><Link className="inline-block" to="https://github.com/EchoZhaoH">github</Link><span>，欢迎关注我。</span>
+            <p className="mgt-l mgl-l mgr-l text-center"><span>前端工程师，喜欢摄影，目前正在学习 rust。</span>
             </p>
           </div>
         </TypeIt>
