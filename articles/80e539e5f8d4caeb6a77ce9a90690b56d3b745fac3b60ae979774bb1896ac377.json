@@ -1,1 +1,0 @@
-{"title":"微前端解决方案-qiankun","tag":"微前端","date":"2021-10-20","body":"<h3>组成 qiankun 的基石</h3>\n<h4>single-spa</h4>\n<p><strong>single-spa</strong> 是支撑 <strong>qiankun</strong> 的基石，<strong>qiankun</strong> 在上层包装了 <strong>single-spa</strong>，从而实现对外暴露了更加友好的 <code>api</code>。让开发者能更加专注业务开发。\n我们可以从 <strong>qiankun</strong> 的第一个启动函数 <code>start</code> 开始剖析，</p>\n"}
