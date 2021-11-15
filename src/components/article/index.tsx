@@ -19,7 +19,7 @@ export function Article(props: ArticleProps) {
         {!!data.tag && <span className="mgr-s">{data.tag}</span>}
         <span>{data.date}</span>
       </div>
-      <article className={classNames('mgt-l')} dangerouslySetInnerHTML={{ __html: data.body }}></article>
+      <article className={classNames('mgt-l', 'prose')} dangerouslySetInnerHTML={{ __html: data.body }}></article>
       <Back url="/articles" />
     </div>
   )
