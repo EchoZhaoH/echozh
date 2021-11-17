@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.7715f7cd.chunk.css",
-    "main.js": "/static/js/main.66997acb.chunk.js",
-    "main.js.map": "/static/js/main.66997acb.chunk.js.map",
+    "main.css": "/static/css/main.31c2b470.chunk.css",
+    "main.js": "/static/js/main.8308e1d5.chunk.js",
+    "main.js.map": "/static/js/main.8308e1d5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5f2097a0.js",
     "runtime-main.js.map": "/static/js/runtime-main.5f2097a0.js.map",
     "static/css/2.5eb8c519.chunk.css": "/static/css/2.5eb8c519.chunk.css",
@@ -23,7 +23,7 @@
     "model/tororo.model.json": "/model/tororo.model.json",
     "model/tororo.pose.json": "/model/tororo.pose.json",
     "static/css/2.5eb8c519.chunk.css.map": "/static/css/2.5eb8c519.chunk.css.map",
-    "static/css/main.7715f7cd.chunk.css.map": "/static/css/main.7715f7cd.chunk.css.map",
+    "static/css/main.31c2b470.chunk.css.map": "/static/css/main.31c2b470.chunk.css.map",
     "static/js/2.160c1d04.chunk.js.LICENSE.txt": "/static/js/2.160c1d04.chunk.js.LICENSE.txt",
     "static/js/live2d.min.js": "/static/js/live2d.min.js",
     "static/js/live2dcubismcore.min.js": "/static/js/live2dcubismcore.min.js",
@@ -35,7 +35,7 @@
     "static/js/runtime-main.5f2097a0.js",
     "static/css/2.5eb8c519.chunk.css",
     "static/js/2.160c1d04.chunk.js",
-    "static/css/main.7715f7cd.chunk.css",
-    "static/js/main.66997acb.chunk.js"
+    "static/css/main.31c2b470.chunk.css",
+    "static/js/main.8308e1d5.chunk.js"
   ]
 }
