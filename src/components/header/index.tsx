@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import github from '@assets/svg/github.svg';
+import { ReactComponent as Github} from '@assets/svg/github.svg';
 import { githubSrc } from '@/data';
 
 export function Header() {
@@ -9,7 +9,7 @@ export function Header() {
         Echo
       </Link>
       <a href={githubSrc} title="github" className="ml-4">
-        <img src={github} alt="github" />
+        <Github />
       </a>
       <span className="flex-1"></span>
       <Link to="/articles">

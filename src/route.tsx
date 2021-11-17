@@ -13,8 +13,10 @@ import { Sierpinski as Class1Demo2 } from './components/webgl/class1/demo2'
 import { Sierpinski as Class1Demo3 } from './components/webgl/class1/demo3'
 import { Sierpinski as Class1Demo4 } from './components/webgl/class1/demo4'
 import { WEBGLClassesPage } from './components/webgl/classes'
+import { useModeSwitch } from './hooks/useModeSwitch'
 
 export function RoutesMap() {
+  useModeSwitch()
   return (
     <Router>
       <Switch>

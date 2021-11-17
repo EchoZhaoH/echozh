@@ -8,6 +8,10 @@ body,
   overflow: auto;
 }
 
+* {
+  @apply text-dark-500;
+}
+
 @each $dir, $dirV in $direction {
   @each $size, $sizeV in $sizeMap {
     .mg#{$dir}-#{$size} {
@@ -37,5 +41,17 @@ a {
   }
   &:hover::after {
     top: 0%;
+  }
+}
+
+.dark {
+  * {
+    @apply text-white;
+  }
+  a {
+    color: #ffffff;
+  }
+  body {
+    @apply bg-dark-500;
   }
 }

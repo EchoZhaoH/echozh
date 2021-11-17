@@ -1,4 +1,5 @@
 import { defineConfig } from 'windicss/helpers'
+import typography from 'windicss/plugin/typography'
 
 function range(size, startAt = 1) {
   return Array.from(Array(size).keys()).map(i => i + startAt)
@@ -16,6 +17,9 @@ export default defineConfig({
     range(10).map(i => `mt-${i}`), // mt-1 to mt-10
   ],
   plugins: [
-    require('windicss/plugin/typography')
-  ]
+    typography({
+      dark: true
+    })
+  ],
+  darkMode: 'class'
 })
