@@ -23,7 +23,11 @@
       "@components/*": [
         "src/components/*"
       ]
-    }
+    },
+    "lib": [
+      "ES6",
+      "DOM"
+    ]
   },
   "include": [
     "./src/**/*"

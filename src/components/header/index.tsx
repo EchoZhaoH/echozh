@@ -18,6 +18,9 @@ export function Header() {
       <Link to="/webgl" className="ml-4">
          WebGl
       </Link>
+      <Link to="/graffiti" className="ml-4">
+        🖼
+      </Link>
     </div>
   )
 }

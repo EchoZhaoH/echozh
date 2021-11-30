@@ -7,6 +7,7 @@ import {
 import App from './App'
 import { Archive } from './components/archive'
 import { Article } from './components/article'
+import { Graffiti } from './components/graffiti'
 import VWorld from './components/v-world'
 import { Sierpinski as Class1Demo1 } from './components/webgl/class1/demo1'
 import { Sierpinski as Class1Demo2 } from './components/webgl/class1/demo2'
@@ -20,6 +21,7 @@ export function RoutesMap() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/graffiti" component={Graffiti} />
         <Route exact path="/v-world" component={VWorld} />
         <Route exact path="/webgl/class1/demo4" component={Class1Demo4} />
         <Route exact path="/webgl/class1/demo3" component={Class1Demo3} />

@@ -7736,6 +7736,11 @@ klona@^2.0.4:
   resolved "https://registry.npm.taobao.org/klona/download/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha1-e7Hjr/sMuGJFR+9+j2cI6i4538A=
 
+konva@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.npmmirror.com/konva/download/konva-8.3.0.tgz#538452fedc0d0e135415f5f53787f779e8530027"
+  integrity sha512-V83lFjf1xPJp7SzWKktOgRFPYa8SOHKVfgru3jjdMjKTGNpCGrIh3CuJeKC/tJ5Fg0P3lOpPCR30gDbDsATmDA==
+
 language-subtag-registry@~0.3.2:
   version "0.3.21"
   resolved "https://registry.npm.taobao.org/language-subtag-registry/download/language-subtag-registry-0.3.21.tgz#04ac218bea46f04cb039084602c6da9e788dd45a"
