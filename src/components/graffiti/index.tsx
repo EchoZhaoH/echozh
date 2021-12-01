@@ -1,41 +1,31 @@
-import { useEffect, useRef, MouseEvent } from "react"
-import Konva from 'konva'
-// import { useKonvaStage } from "./hooks"
+import { useEffect, useRef } from "react"
+import { GraffitiBoard } from "./canvas"
+import { ActionToolbar, HeaderToolbar } from "./components/toolbar"
 
 export function Graffiti() {
   const ref = useRef<HTMLDivElement | null>(null)
+  const stage = useRef<GraffitiBoard | null>(null)
   useEffect(() => {
     if (!ref.current) {
       return
     }
-    const stage = new Konva.Stage({
-      container: ref.current,
+    stage.current = new GraffitiBoard(ref.current, {
       width: window.innerWidth,
       height: window.innerHeight
     })
-    const layer = new Konva.Layer()
-    const pen = new Konva.Line({
-      points: [0,0],
-      fill: 'red',
-      stroke: 'red',
-      strokeWidth: 2,
-      draggable: true
-    })
-    const draw = (e: MouseEvent) => {
-      const {
-        clientX,
-        clientY
-      } = e
-      pen.points(pen.points().concat([clientX, clientY]))
-      pen.draw()
-      layer.batchDraw()
-      stage.batchDraw()
-    }
-    stage.addEventListener('mousemove', draw as any)
-    layer.add(pen)
-    stage.add(layer)
   }, [ref])
   return (
-    <div ref={(refEl) => ref.current = refEl}></div>
+    <div>
+      <HeaderToolbar />
+      <ActionToolbar 
+        onAction={(action) => {
+          if (!stage.current) {
+            return
+          }
+          stage.current.setAction(action);
+        }}
+      />
+      <div ref={(refEl) => ref.current = refEl}></div>
+    </div>
   )
 }
