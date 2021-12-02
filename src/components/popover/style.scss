@@ -1,0 +1,24 @@
+#arrow {
+  visibility: hidden;
+  &,
+  &::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+  }
+  &::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+  }
+}
+
+#tooltip {
+  /* ... */
+  display: none;
+  &[data-show] {
+    display: block;
+  }
+}
+

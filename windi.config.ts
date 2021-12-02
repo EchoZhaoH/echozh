@@ -19,6 +19,9 @@ export default defineConfig({
   theme: {
     inset: {
       half: "50%"
+    },
+    borderRadius: {
+      half: '50%'
     }
   },
   plugins: [
