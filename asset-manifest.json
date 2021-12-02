@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.73cc1244.chunk.css",
-    "main.js": "/static/js/main.5df2b82a.chunk.js",
-    "main.js.map": "/static/js/main.5df2b82a.chunk.js.map",
+    "main.css": "/static/css/main.6a85102f.chunk.css",
+    "main.js": "/static/js/main.482351a8.chunk.js",
+    "main.js.map": "/static/js/main.482351a8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5f2097a0.js",
     "runtime-main.js.map": "/static/js/runtime-main.5f2097a0.js.map",
     "static/css/2.5eb8c519.chunk.css": "/static/css/2.5eb8c519.chunk.css",
-    "static/js/2.2354548c.chunk.js": "/static/js/2.2354548c.chunk.js",
-    "static/js/2.2354548c.chunk.js.map": "/static/js/2.2354548c.chunk.js.map",
+    "static/js/2.1e58d5ec.chunk.js": "/static/js/2.1e58d5ec.chunk.js",
+    "static/js/2.1e58d5ec.chunk.js.map": "/static/js/2.1e58d5ec.chunk.js.map",
     "index.html": "/index.html",
     "model/moc/tororo.2048/texture_00.png": "/model/moc/tororo.2048/texture_00.png",
     "model/moc/tororo.moc": "/model/moc/tororo.moc",
@@ -23,8 +23,8 @@
     "model/tororo.model.json": "/model/tororo.model.json",
     "model/tororo.pose.json": "/model/tororo.pose.json",
     "static/css/2.5eb8c519.chunk.css.map": "/static/css/2.5eb8c519.chunk.css.map",
-    "static/css/main.73cc1244.chunk.css.map": "/static/css/main.73cc1244.chunk.css.map",
-    "static/js/2.2354548c.chunk.js.LICENSE.txt": "/static/js/2.2354548c.chunk.js.LICENSE.txt",
+    "static/css/main.6a85102f.chunk.css.map": "/static/css/main.6a85102f.chunk.css.map",
+    "static/js/2.1e58d5ec.chunk.js.LICENSE.txt": "/static/js/2.1e58d5ec.chunk.js.LICENSE.txt",
     "static/js/live2d.min.js": "/static/js/live2d.min.js",
     "static/js/live2dcubismcore.min.js": "/static/js/live2dcubismcore.min.js",
     "static/media/theme.scss": "/static/media/Inter.var.c2fe3cb2.woff2",
@@ -34,8 +34,8 @@
   "entrypoints": [
     "static/js/runtime-main.5f2097a0.js",
     "static/css/2.5eb8c519.chunk.css",
-    "static/js/2.2354548c.chunk.js",
-    "static/css/main.73cc1244.chunk.css",
-    "static/js/main.5df2b82a.chunk.js"
+    "static/js/2.1e58d5ec.chunk.js",
+    "static/css/main.6a85102f.chunk.css",
+    "static/js/main.482351a8.chunk.js"
   ]
 }
