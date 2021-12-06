@@ -9,9 +9,9 @@ export class GraffitiLine extends GraffitiShape {
 
   lines: Konva.Line[];
   painting: boolean;
-  constructor(stage: GraffitiBoard) {
+  constructor(renderer: GraffitiBoard) {
     super()
-    this.renderer = stage;
+    this.renderer = renderer;
     this.lines = [];
     this.painting = false;
   }
@@ -23,7 +23,7 @@ export class GraffitiLine extends GraffitiShape {
   initStageListeners() {
     const stage = this.renderer.stage;
     // mousedown
-    stage.addEventListener('mousedown touchstart', () => {
+    stage.on('mousedown touchstart', () => {
       if (!this.isPenAction) {
         return;
       }
@@ -38,21 +38,24 @@ export class GraffitiLine extends GraffitiShape {
       this.painting = true
     });
     // mouseup
-    stage.addEventListener('mouseup touchend', () => {
+    stage.on('mouseup touchend', () => {
       if (!this.isPenAction) {
         return
       }
       this.painting = false;
     });
     // mouse move
-    stage.addEventListener('mousemove touchmove', (e) => {
+    stage.on('mousemove touchmove', (e) => {
       if (!this.isPenAction || !this.painting) {
         return
       }
+      if (e.target !== stage) {
+        return;
+      }
       const line = this.lines[this.lines.length - 1];
       const point = [
-        (e as MouseEvent).clientX,
-        (e as MouseEvent).clientY
+        stage.getPointerPosition().x,
+        stage.getPointerPosition().y
       ];
       line.points(line.points().concat(point));
     })
@@ -65,6 +68,14 @@ export class GraffitiLine extends GraffitiShape {
         this.painting = false;
       }
     })
+  }
+
+  destroy() {
+    const stage = this.renderer.stage;
+    stage.off('mousedown touchstart');
+    stage.off('mouseup touchend');
+    stage.off('mousemove touchmove');
+    this.renderer.off('action:change');
   }
 
   get isPenAction() {

@@ -21,7 +21,10 @@ export function ActionToolbar(props: ActionToolbarProps) {
         <Popover
           content="111"
         >
-          <button className="w-38px h-38px flex items-center justify-center dark:text-dark-100 border-1 border-gray-100 hover:bg-gray-300 rounded-half">
+          <button 
+            className="w-38px h-38px flex items-center justify-center dark:text-dark-100 border-1 border-gray-100 hover:bg-gray-300 rounded-half"
+            onClick={() => onAction(ActionType.NONE)}
+          >
             <i className="icon-shape-circle dark:text-dark-100" />
           </button>
         </Popover>

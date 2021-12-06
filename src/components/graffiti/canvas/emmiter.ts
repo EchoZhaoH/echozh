@@ -21,4 +21,12 @@ export class Emitter {
     }
     listener.forEach(fn => fn(p));
   }
+
+  off(key: string) {
+    const listener = this.listeners[key];
+    if (!listener) {
+      return
+    }
+    this.listeners[key] = [];
+  }
 }

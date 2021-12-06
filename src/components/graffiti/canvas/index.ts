@@ -1,7 +1,9 @@
-import { GraffitiLine } from './line';
+import { GraffitiTransformer } from './transformer';
 import Konva from 'konva'
+import { ShapeConfig, Shape } from 'konva/lib/Shape'
 import type { StageConfig } from 'konva/lib/Stage'
 import { v4 as uuid } from 'uuid'
+import { GraffitiLine } from './line';
 import { Emitter } from './emmiter';
 import { GraffitiShape } from './shaps';
 import { ActionType } from './types';
@@ -34,14 +36,15 @@ export class GraffitiBoard extends Emitter {
     this.stage.add(this.activeLayer);
     this.setCursor();
     this.shapes = [
-      new GraffitiLine(this)
-    ]
+      new GraffitiLine(this),
+      new GraffitiTransformer(this)
+    ];
     this.initShapes();
     this.autoResize();
   }
 
   setCursor(cursor?: string) {
-    document.body.style.cursor = cursor || this.cursor;
+    this.stage.container().style.cursor = cursor || this.cursor;
     if (cursor) {
       this.cursor = cursor;
     }
@@ -63,13 +66,19 @@ export class GraffitiBoard extends Emitter {
     this.setCursor();
   }
 
-  addShape(node: Konva.Group | Konva.Shape) {
-    this.activeLayer.add(node);
+  addShape(...node: (Konva.Group | Shape<ShapeConfig>)[]) {
+    this.activeLayer.add(...node);
   }
 
   private initShapes() {
     this.shapes.forEach(shape => {
       shape.init()
+    })
+  }
+
+  destroy() {
+    this.shapes.forEach(shape => {
+      shape.destroy()
     })
   }
 
